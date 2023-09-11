@@ -13,11 +13,12 @@ This Python script is designed to communicate with an Arduino and a laser device
 1. **Setup:** Plug both the laser and the motor contoller into the wall. Laser will immediately turn on, red light on top of the motor controller will turn on. Plug both USB cords (gray and black) into usb ports connected to the computer
 2. **Arduino Flashing:** Ensure that your Arduino is flashed with the LaserThicknessArduino code. This is usually done only once unless you make changes to the Arduino code, Translational Research Laboratories in Urogynecology can likely skip this step.
 3. **Serial Port Identification:** Identify what ports the USB cords are plugged into.
-   *Mac*
+   *MacOS*
    ```terminal
    open terminal
    type "ls /dev/tty.*"
    ```
+   *Example MacOS Output*
    ![Alt text](MACOS_output.png?raw=true "Example Terminal Output")
 5. **Serial Port Configuration:** Specify the correct serial ports for the Arduino and laser in the script (Guide.pdf explains how to find this):
    ```python
