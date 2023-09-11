@@ -18,6 +18,7 @@ This Python script is designed to communicate with an Arduino and a laser device
    open terminal
    type "ls /dev/tty.*"
    ```
+   ![Alt text](MACOS_output.png?raw=true "Example Terminal Output")
 5. **Serial Port Configuration:** Specify the correct serial ports for the Arduino and laser in the script (Guide.pdf explains how to find this):
    ```python
    arduino = serial.Serial('PATH_TO_ARDUINO_PORT', 115200)  # Arduino serial port
