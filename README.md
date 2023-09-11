@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This Python script is designed to communicate with an Arduino and a laser device (Acuity Laser System) to measure the thickness of a tissue sample. The script provides a straightforward way to collect data on tissue thickness. Before using this script, ensure that the Arduino has been flashed with the LaserThicknessArduino code (typically not needed unless you've made changes to the code). Additionally, specify the serial ports where the Arduino and laser are connected. When the script is run, it will measure the tissue thickness and save the data to a CSV file with a timestamp. This code was written for MacOS. As the code is written will likely work for Windows and Linux but no testing has been conducted.
+This Python script is designed to communicate with an Arduino and a laser device (Acuity Laser System) to measure the thickness of a tissue sample. The script provides a straightforward way to collect data on tissue thickness. Before using this script, ensure that the Arduino has been flashed with the LaserThicknessArduino code (typically not needed unless you've made changes to the code). Additionally, specify the serial ports where the Arduino and laser are connected. When the script is run, it will measure the tissue thickness and save the data to a CSV file with a timestamp. This code was written for MacOS. The code will likely work for Windows and Linux but no testing has been conducted to confirm.
 
 ## Instructions
 
