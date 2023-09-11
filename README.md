@@ -21,5 +21,5 @@ This Python script is designed to communicate with an Arduino and a laser device
    python laser_thickness_measurement.py
 6. **Data Output:** The script will save the measurement data to a CSV file with a timestamp in the filename, such as data_[month-day-year_hour-minute-second].csv.
 
-##License
+## License
 This script is provided under the MIT License. You are free to modify and distribute it as needed. Please refer to the LICENSE file for details.
