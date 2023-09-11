@@ -27,7 +27,7 @@ This Python script is designed to communicate with an Arduino and a laser device
 6. **Travel Distance:** Set the travelDistance_mm variable to the desired travel distance in millimeters. Note that it should by default be negative if using it in the configuration that it was left in (e.g., -12 for a 12mm travel).
 7. **Run the Script:** Execute the script in your Python environment. It will communicate with the Arduino and laser to measure tissue thickness. Example usage:
    ```python
-   python laser_thickness_measurement.py
+   python laserThickness.py
 8. **Data Output:** The script will save the measurement data to a CSV file with a timestamp in the filename, such as data_[month-day-year_hour-minute-second].csv.
 
 ## License
