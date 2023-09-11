@@ -6,13 +6,13 @@
 
 ## Purpose
 
-This Python script is designed to communicate with an Arduino and a laser device (Acuity Laser System) to measure the thickness of a tissue sample. The script provides a straightforward way to collect data on tissue thickness. Before using this script, ensure that the Arduino has been flashed with the LaserThicknessArduino code (typically not needed unless you've made changes to the code). Additionally, specify the serial ports where the Arduino and laser are connected. When the script is run, it will measure the tissue thickness and save the data to a CSV file with a timestamp.
+This Python script is designed to communicate with an Arduino and a laser device (Acuity Laser System) to measure the thickness of a tissue sample. The script provides a straightforward way to collect data on tissue thickness. Before using this script, ensure that the Arduino has been flashed with the LaserThicknessArduino code (typically not needed unless you've made changes to the code). Additionally, specify the serial ports where the Arduino and laser are connected. When the script is run, it will measure the tissue thickness and save the data to a CSV file with a timestamp. This code was written for MacOS. As the code is written will likely work for Windows and Linux but no testing has been conducted.
 
 ## Instructions
 
-1. **Setup:** Plug both the laser and the motor contoller into the wall. Laser will immediately turn on, red light on top of the motor controller will turn on. Plug both USB cords (gray and black) into usb ports connected to the computer
+1. **Setup:** Plug both the laser and the motor contoller into the wall. Laser will immediately turn on, red light on top of the motor controller will turn on. Plug both USB cords into usb ports on the computer.
 2. **Arduino Flashing:** Ensure that your Arduino is flashed with the LaserThicknessArduino code. This is usually done only once unless you make changes to the Arduino code, Translational Research Laboratories in Urogynecology can likely skip this step.
-3. **Serial Port Identification:** Identify what ports the USB cords are plugged into.\
+3. **Serial Port Identification:** Identify what ports the USB cords are plugged into. Boxed are the two items that need to be copied into the code in the next step.\
    *MacOS*
    ```terminal
    open terminal
@@ -20,10 +20,10 @@ This Python script is designed to communicate with an Arduino and a laser device
    ```
    *Example MacOS Output*
    ![Alt text](MACOS_output.png?raw=true "Example Terminal Output")
-5. **Serial Port Configuration:** Specify the correct serial ports for the Arduino and laser in the script (Guide.pdf explains how to find this):
+5. **Serial Port Configuration:** Specify the correct serial ports for the Arduino and laser in the script (From step 3):
    ```python
-   arduino = serial.Serial('PATH_TO_ARDUINO_PORT', 115200)  # Arduino serial port
-   laser = serial.Serial('PATH_TO_LASER_PORT', 9600)  # Laser serial port
+   arduino = serial.Serial('/dev/tty.usbmodem######', 115200)  # Arduino serial port
+   laser = serial.Serial('/dev/tty.usbserial-#####', 9600)  # Laser serial port
 6. **Travel Distance:** Set the travelDistance_mm variable to the desired travel distance in millimeters. Note that it should be negative if the bed moves down (e.g., -12 for a 12mm downward travel).
 7. **Run the Script:** Execute the script in your Python environment. It will communicate with the Arduino and laser to measure tissue thickness. Example usage:
    ```python
